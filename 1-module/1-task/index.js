@@ -1,12 +1,12 @@
 function factorial(n) {
-  total = number;
-  if (number >= 1) {
-    for(number -= 1; number > 1; number--) {
-      total *= number;
+  total = n;
+  if (n >= 1) {
+    for(n -= 1; n > 1; n--) {
+      total *= n;
   }
   return total;
-  } else if (number === 0) {
-    return 1;
+  } else if (n === 0) {
+    return 1
   }
   return 'can\'t calculate factorial';
 }
