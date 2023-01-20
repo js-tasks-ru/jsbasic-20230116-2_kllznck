@@ -1,5 +1,5 @@
 function factorial(n) {
-  total = n;
+  let total = n;
   if (n >= 1) {
     for(n -= 1; n > 1; n--) {
       total *= n;
