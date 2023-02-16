@@ -1,6 +1,6 @@
 export default class ProductCard {
   elem = null;
-  #product = [];
+  #product = {};
 
   constructor(product) {
     this.#product = product;
