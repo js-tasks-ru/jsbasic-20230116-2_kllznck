@@ -53,13 +53,12 @@ export default class StepSlider {
     this.elem.dispatchEvent(sliderChange);
   };
 
-  #sliderMove(value) {
+  #sliderMove() {
     this.#spans.forEach((span) => {
       span.classList.remove("slider__step-active");
     });
     this.#spans[this.value].classList.add("slider__step-active");
     this.#sliderValue.innerHTML = this.value;
-
     this.#slider.querySelector(".slider__thumb").style.left =
       this.#valuePercents + "%";
     this.#slider.querySelector(".slider__progress").style.width =

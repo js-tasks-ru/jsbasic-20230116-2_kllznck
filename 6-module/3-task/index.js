@@ -45,8 +45,9 @@ export default class Carousel {
       </div>
 
       <div class="carousel__inner">
-        ${this.#slides.map(
-          (el) => `
+        ${this.#slides
+          .map(
+            (el) => `
         <div class="carousel__slide" data-id="penang-shrimp">
           <img src="/assets/images/carousel/${el.image}" class="carousel__img" alt="slide">
           <div class="carousel__caption">
@@ -58,7 +59,8 @@ export default class Carousel {
           </div>
         </div>
         `
-        )}
+          )
+          .join("")}
       </div>
     </div
 
