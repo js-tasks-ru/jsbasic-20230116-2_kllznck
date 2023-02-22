@@ -45,6 +45,7 @@ export default class CartIcon {
   }
 
   updatePosition() {
+    if (!this.elem.offsetWidth) return;
     let isMobile = document.documentElement.clientWidth <= 767;
     let leftIndent =
       Math.min(
@@ -52,12 +53,9 @@ export default class CartIcon {
         document.documentElement.clientWidth - this.elem.offsetWidth - 10
       ) + "px";
 
-    if (this.elem.offsetWidth === 0) return;
-
-    if (this.once) {
+    if (!this.initialCoord) {
       this.initialCoord =
         this.elem.getBoundingClientRect().top + window.pageYOffset;
-      this.once = false;
     }
 
     if (window.pageYOffset > this.initialCoord) {
