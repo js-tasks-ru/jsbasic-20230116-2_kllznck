@@ -166,9 +166,7 @@ export default class Cart {
 
   onSubmit = (event) => {
     event.preventDefault();
-    event.target
-      .querySelector('[type = "submit"]')
-      .classList.add(".is-loading");
+    event.target.querySelector('[type = "submit"]').classList.add("is-loading");
     const formData = new FormData(event.target);
     fetch(`https://httpbin.org/post`, {
       method: "POST",
