@@ -20,7 +20,7 @@ export default class Cart {
       this.onProductUpdate(newCartItem);
     }
 
-    console.log(this.cartItems);
+    // console.log(this.cartItems);
   }
 
   updateProductCount(productId, amount) {
