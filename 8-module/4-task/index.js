@@ -184,6 +184,7 @@ export default class Cart {
       </div>
       `;
       this.modal.setBody(createElement(modalBody));
+      this.cartIcon.update(this);
     });
   };
 
